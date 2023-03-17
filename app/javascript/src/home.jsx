@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Header from './header';
 
 import './home.scss';
 
@@ -13,7 +12,6 @@ const Home = props => (
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <Header />,
     <Home />,
     document.body.appendChild(document.createElement('div')),
   )
