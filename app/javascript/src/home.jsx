@@ -28,7 +28,7 @@ return(
         <div className="row flex-column flex-sm-row text-center">
 
           <div className="col-12 col-md-6 d-flex">
-            <form onSubmit={handleSignUp} className="home-page-forms d-flex flex-column justify-content-around w-100 p-4">
+            <form  className="home-page-forms d-flex flex-column justify-content-around w-100 p-4">
               <p className="heading">Create your account</p>
               <div>
                 <label htmlFor="newUsernameInput" className="form-label" hidden>Username</label>
@@ -42,7 +42,7 @@ return(
                 <label htmlFor="newPasswordInput" className="form-label" hidden>Password</label>
                 <input type="password" className="form-control" id="newPasswordInput" placeholder="password" minLength="8" required></input>
               </div>
-              <button type="submit" className="btn mt-4 mt-lg-4" onSubmit={handleSignUp}>Sign up</button>
+              <button type="submit" className="btn mt-4 mt-lg-4" >Sign up</button>
               <p className="form-message my-2">
                 {signUpMessage}
               </p>
@@ -50,7 +50,7 @@ return(
           </div>
 
           <div className="col-12 col-md-6 d-flex my-4 my-md-0">
-            <form onSubmit={handleLogIn} className="home-page-forms d-flex flex-column justify-content-around w-100 p-4">
+            <form  className="home-page-forms d-flex flex-column justify-content-around w-100 p-4">
               <p className="heading">Already have an account?</p>
               <div>
                 <label htmlFor="usernameInput" className="form-label" hidden>Username</label>
@@ -60,7 +60,7 @@ return(
                 <label htmlFor="passwordInput" className="form-label" hidden>Password</label>
                 <input type="password" className="form-control mb-0 mb-md-3" id="passwordInput" placeholder="password" required></input>
               </div>
-              <button type="submit" className="btn mt-4 mt-md-2 mt-lg-0" onSubmit={handleLogIn}>Log In</button>
+              <button type="submit" className="btn mt-4 mt-md-2 mt-lg-0" >Log In</button>
               <p className="form-message m-0 p-0">
                 {logInMessage}
               </p>
