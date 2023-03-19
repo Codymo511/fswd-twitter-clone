@@ -12,17 +12,14 @@ const Home = () => {(
 return(
   <div id="homePage" className="container-fluid">
     <div className="row">
-
-     
-
       <div className="col-12 col-lg-6 fw-bold p-4 home-wrapper">
 
         <div className="twitter-icon text-center text-lg-start">
           <i className="fa-brands fa-twitter"></i>
         </div>
         <div className="my-3 mb-5 mb-lg-3">
-          <h1 className="my-3">Happening Now</h1>
-          <h3>Join Twitter today.</h3>
+          <h1 className="my-3">Welcome to Twitter</h1>
+          <h3>Connect with your firends and other fascinating people</h3>
         </div>
 
         <div className="row flex-column flex-sm-row text-center">
