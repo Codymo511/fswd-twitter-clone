@@ -22,7 +22,7 @@ return(
           <h3>Connect with your firends and other fascinating people</h3>
         </div>
 
-        <div className="row flex-column flex-sm-row text-center">
+        <div className="flex-column flex-sm-row text-center">
 
           <div className="col-12 col-md-6 d-flex">
             <form  className="home-page-forms d-flex flex-column justify-content-around w-100 p-4">
@@ -48,7 +48,6 @@ return(
 
           <div className="col-12 col-md-6 d-flex my-4 my-md-0">
             <form  className="home-page-forms d-flex flex-column justify-content-around w-100 p-4">
-              <p className="heading">Already have an account?</p>
               <div>
                 <label htmlFor="usernameInput" className="form-label" hidden>Username</label>
                 <input type="text" className="form-control" id="usernameInput" placeholder="username" required></input>
