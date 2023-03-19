@@ -44,7 +44,7 @@ return(
               </div>
               <button type="submit" className="btn mt-4 mt-lg-4" >Sign up</button>
               <p className="form-message my-2">
-                {signUpMessage}
+               
               </p>
             </form>
           </div>
