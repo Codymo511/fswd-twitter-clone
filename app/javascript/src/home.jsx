@@ -62,7 +62,6 @@ return(
               </div>
               <button type="submit" className="btn mt-4 mt-md-2 mt-lg-0" >Log In</button>
               <p className="form-message m-0 p-0">
-                {logInMessage}
               </p>
             </form>
           </div>
