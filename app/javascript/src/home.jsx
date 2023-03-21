@@ -70,7 +70,7 @@ const handleSubmit = (e) => {
           <div className="row flex-column flex-sm-row text-center">
 
             <div className="col-12 col-md-6 d-flex">
-              <form onSubmit={handleSignUp} className="home-page-forms d-flex flex-column justify-content-around w-100 p-4">
+              <form className="home-page-forms d-flex flex-column justify-content-around w-100 p-4">
                 <p className="heading">Create your account</p>
                 <div>
                   <label htmlFor="newUsernameInput" className="form-label" hidden>Username</label>
