@@ -10,6 +10,9 @@ const Home = () => {
   const [password, setPassword] = useState('');
   const [signUpMessage, setSignUpMessage] = useState("");
   const [logInMessage, setLogInMessage] = useState("");
+
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
   
   //   handlers
 
