@@ -44,13 +44,13 @@ const handleSubmit = (e) => {
 
   //  go to feed if user is logged in
 
-  useEffect(() => {
-    authenticateUser(function(response) {
-      if (response.authenticated == true) {
-        window.location.assign('/feed');
-      }
-    })
-  }, [])
+  //useEffect(() => {
+    //authenticateUser(function(response) {
+     // if (response.authenticated == true) {
+      //  window.location.assign('/feed');
+    // }
+  //  })
+  //}, [])
 
   return(
     <div id="homePage" className="container-fluid">
