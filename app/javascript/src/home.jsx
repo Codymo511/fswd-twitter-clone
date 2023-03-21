@@ -12,7 +12,7 @@ const Home = () => {(
 return(
   <div id="homePage" className="container-fluid">
     <div className="row">
-      <div className="col-12 col-lg-6 fw-bold p-4 home-wrapper">
+      <div className="flex-row col-12 col-lg-6 fw-bold p-4 home-wrapper">
 
         <div className="twitter-icon text-center text-lg-start">
           <i className="fa-brands fa-twitter"></i>
