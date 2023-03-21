@@ -56,9 +56,6 @@ const handleSubmit = (e) => {
     <div id="homePage" className="container-fluid">
       <div className="row">
 
-        <div id="homeLeft" className="col-6 d-none d-lg-flex px-0">
-          <img className="img-fluid p-4 ps-0" src={image} alt="graffiti wall art image"></img>
-        </div>
 
         <div className="col-12 col-lg-6 fw-bold p-4 home-wrapper">
 
