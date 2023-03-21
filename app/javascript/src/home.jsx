@@ -94,7 +94,7 @@ const handleSubmit = (e) => {
             </div>
 
             <div className="col-12 col-md-6 d-flex my-4 my-md-0">
-              <form onSubmit={handleLogIn} className="home-page-forms d-flex flex-column justify-content-around w-100 p-4">
+              <form  className="home-page-forms d-flex flex-column justify-content-around w-100 p-4">
                 <p className="heading">Already have an account?</p>
                 <div>
                   <label htmlFor="usernameInput" className="form-label" hidden>Username</label>
@@ -104,9 +104,9 @@ const handleSubmit = (e) => {
                   <label htmlFor="passwordInput" className="form-label" hidden>Password</label>
                   <input type="password" className="form-control mb-0 mb-md-3" id="passwordInput" placeholder="password" required></input>
                 </div>
-                <button type="submit" className="btn mt-4 mt-md-2 mt-lg-0" onSubmit={handleLogIn}>Log In</button>
+                <button type="submit" className="btn mt-4 mt-md-2 mt-lg-0" >Log In</button>
                 <p className="form-message m-0 p-0">
-                  {logInMessage}
+                 
                 </p>
               </form>
             </div>
