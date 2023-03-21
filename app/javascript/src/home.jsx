@@ -1,51 +1,46 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import ReactDOM from 'react-dom';
-import $ from 'jquery';
-import { createUser, logInUser, authenticateUser } from '../packs/requests';
-import './stylesheets/home.scss';
-import './stylesheets/styles.scss';
-import image from './images/pexels-humphrey-muleba-1647121.jpg';
+
 
 const Home = () => {
 
   //   states
-
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [signUpMessage, setSignUpMessage] = useState("");
   const [logInMessage, setLogInMessage] = useState("");
   
   //   handlers
 
-  const handleSignUp = (event) => {
-    event.preventDefault();
-    const username = $('#newUsernameInput').val();
-    const email = $('#newEmailInput').val();
-    const password = $('#newPasswordInput').val();
-    createUser(username, email, password, function (response) {
-      if (response.success == false) {
-        setSignUpMessage(response.error);
-      }
-      else {
-        setSignUpMessage("Success! Please log in");
-        $('#newUsernameInput').val('');
-        $('#newEmailInput').val('');
-        $('#newPasswordInput').val('');
-      }
-    });
-  }
+ // Handling the name change
+const handleName = (e) => {
+  setName(e.target.value);
+  setSubmitted(false);
+  };
+  
+  // Handling the email change
+  const handleEmail = (e) => {
+  setEmail(e.target.value);
+  setSubmitted(false);
+  };
+  
+  // Handling the password change
+  const handlePassword = (e) => {
+  setPassword(e.target.value);
+  setSubmitted(false);
+  };
 
-  const handleLogIn = (event) => {
-    event.preventDefault();
-    const username = $('#usernameInput').val();
-    const password = $('#passwordInput').val();
-    logInUser(username, password, function (response) {
-      if (response.success == true) {
-        window.location.assign('/feed');
-      }
-      else {
-        setLogInMessage("Error logging in. Please try again")
-      }
-    });
+ // Handling the form submission
+const handleSubmit = (e) => {
+  e.preventDefault();
+  if (name === '' || email === '' || password === '') {
+  setError(true);
+  } else {
+  setSubmitted(true);
+  setError(false);
   }
+  };
 
   //  go to feed if user is logged in
 
@@ -82,20 +77,22 @@ const Home = () => {
                 <p className="heading">Create your account</p>
                 <div>
                   <label htmlFor="newUsernameInput" className="form-label" hidden>Username</label>
-                  <input type="text" className="form-control" id="newUsernameInput" placeholder="username" minLength="3" required></input>
+                  <input onChange={handleName} className="input"
+                  value={name} type="text" />                
+                  </div>
+                <div>
+                <label className="label">Email</label>
+                <input onChange={handleEmail} className="input"
+                value={email} type="email" />
                 </div>
                 <div>
-                  <label htmlFor="newEmailInput" className="form-label" hidden>Email adress</label>
-                  <input type="email" className="form-control" id="newEmailInput" placeholder="email" required></input>
+                <label className="label">Password</label>
+                <input onChange={handlePassword} className="input"
+                value={password} type="password" />
                 </div>
-                <div>
-                  <label htmlFor="newPasswordInput" className="form-label" hidden>Password</label>
-                  <input type="password" className="form-control" id="newPasswordInput" placeholder="password" minLength="8" required></input>
-                </div>
-                <button type="submit" className="btn mt-4 mt-lg-4" onSubmit={handleSignUp}>Sign up</button>
-                <p className="form-message my-2">
-                  {signUpMessage}
-                </p>
+                <button onClick={handleSubmit} className="btn" type="submit">
+                Submit
+                </button>
               </form>
             </div>
 
