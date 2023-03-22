@@ -44,7 +44,7 @@ const handleSubmit = (e) => {
   }
   };
 
-  //  go to feed if user is logged in
+  
 
   //useEffect(() => {
     //authenticateUser(function(response) {

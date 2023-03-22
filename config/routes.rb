@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
 
+
+  get '/login' => 'static_pages#login'
   namespace :api do
     # USERS
     post '/users'                  => 'users#create'
@@ -19,5 +21,6 @@ Rails.application.routes.draw do
   end
 
   get '*path' => 'static_pages#home'
+  get '/authenticated' => 'sessions#authenticated'
   # if you are using active storage to upload and store images, comment the above line
 end
