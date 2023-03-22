@@ -21,6 +21,5 @@ Rails.application.routes.draw do
   end
 
   get '*path' => 'static_pages#home'
-  get '/authenticated' => 'sessions#authenticated'
   # if you are using active storage to upload and store images, comment the above line
 end
