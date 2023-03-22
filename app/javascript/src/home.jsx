@@ -14,7 +14,6 @@ const Home = () => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
   
-  //   handlers
 
  // Handling the name change
 const handleName = (e) => {
@@ -36,7 +35,6 @@ const handleName = (e) => {
 
  // Handling the form submission
 const handleSubmit = (e) => {
-  console.log('click')
   e.preventDefault();
   if (name === '' || email === '' || password === '') {
   setError(true);
