@@ -2926,6 +2926,14 @@ faye-websocket@^0.11.3, faye-websocket@^0.11.4:
   dependencies:
     websocket-driver ">=0.5.1"
 
+fetch-helpers@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/fetch-helpers/-/fetch-helpers-9.0.0.tgz#9b92fcaa49715a2f78c181ac224e035331b496e7"
+  integrity sha512-9H1vIBLV92UFZ0Wb/r4t/Gpzl2NAq3UIdldEESx/t2zWgs7Stdc0oDVDpcJzDoC62Y6rSwUzvW4CH6VtSPbaEA==
+  dependencies:
+    lodash "^4.17.5"
+    shallowequal "^1.1.0"
+
 figgy-pudding@^3.5.1:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.2.tgz#b4eee8148abb01dcf1d1ac34367d59e12fa61d6e"
@@ -6131,6 +6139,11 @@ sha.js@^2.4.0, sha.js@^2.4.8:
   dependencies:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
+
+shallowequal@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/shallowequal/-/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
+  integrity sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==
 
 shebang-command@^1.2.0:
   version "1.2.0"
