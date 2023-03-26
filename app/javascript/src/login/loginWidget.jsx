@@ -1,6 +1,7 @@
 // loginWidget.jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { safeCredentials, handleErrors } from '../utils/fetchHelper';
 
 class LoginWidget extends React.Component {
   state = {
