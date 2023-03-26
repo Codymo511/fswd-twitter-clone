@@ -1,7 +1,6 @@
 // signupWidget.jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { safeCredentials, handleErrors } from '@utils/fetchHelper';
 
 class SignupWidget extends React.Component {
   state = {
