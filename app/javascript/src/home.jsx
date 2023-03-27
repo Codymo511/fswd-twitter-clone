@@ -19,7 +19,7 @@ class Home extends React.Component {
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
-    <App />,
+    <Home />,
     document.body.appendChild(document.createElement('div')),
   )
 })
