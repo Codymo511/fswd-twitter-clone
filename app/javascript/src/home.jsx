@@ -8,8 +8,10 @@ import './home.scss'
 class Home extends React.Component {
   render () {
     return (
+        <Layout>
         <div className="container">
         </div>
+        </Layout>
     )
   }
 }
