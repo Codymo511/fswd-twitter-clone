@@ -37,6 +37,7 @@ gem 'webrick', '~> 1.7'
 # Mail gem
 gem 'mail', '>= 2.8.0.rc1'
 
+gem 'tzinfo-data'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

@@ -254,6 +254,8 @@ GEM
     timeout (0.3.2)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    tzinfo-data (1.2023.2)
+      tzinfo (>= 1.0.0)
     unicode-display_width (2.4.2)
     web-console (4.2.0)
       actionview (>= 6.0.0)
@@ -298,6 +300,7 @@ DEPENDENCIES
   spring (< 3.0)
   spring-watcher-listen (~> 2.0.1)
   sqlite3 (~> 1.4)
+  tzinfo-data
   web-console (>= 4.2)
   webpacker (~> 5.0)
   webrick (~> 1.7)
