@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Layout from '@src/layout';
 import './home.scss'
-import Login from '@src/Login'
+import Index from '@src/Login/Index'
 
 class Home extends React.Component {
   render () {
@@ -16,7 +16,7 @@ class Home extends React.Component {
             <h1 className="my-3">Welcome to Twitter.</h1>
             <h3>Connect with your friends and other fascinating people.</h3>
           </div>
-            <Login/>
+            <Index/>
         </Layout>
     )
   }
