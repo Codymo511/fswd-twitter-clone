@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Layout from '@src/layout';
 import './home.scss'
-
+import Login from '@src/login'
 
 class Home extends React.Component {
   render () {
