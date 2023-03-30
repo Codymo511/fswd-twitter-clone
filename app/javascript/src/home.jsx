@@ -9,7 +9,8 @@ class Home extends React.Component {
   render () {
     return (
         <Layout>
-            <Login/>
+        <div className="container">
+        </div>
         </Layout>
     )
   }
