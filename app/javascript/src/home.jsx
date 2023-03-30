@@ -9,7 +9,14 @@ class Home extends React.Component {
   render () {
     return (
         <Layout>
-    <Login/>
+        <div className="twitter-icon text-center text-lg-start">
+            <i className="fa-brands fa-twitter"></i>
+          </div>
+          <div className="my-3 mb-5 mb-lg-3">
+            <h1 className="my-3">Welcome to Twitter.</h1>
+            <h3>Connect with your friends and other fascinating people.</h3>
+          </div>
+            <Login/>
         </Layout>
     )
   }
