@@ -51,6 +51,13 @@ class Login extends React.Component {
       <Layout>
         <div className="container">
           <div className="row">
+          <div className="twitter-icon text-center text-lg-start">
+          <i className="fa-brands fa-twitter"></i>
+        </div>
+        <div className="my-3 mb-5 mb-lg-3">
+          <h1 className="my-3">Happening Now</h1>
+          <h3>Join Twitter today.</h3>
+        </div>
             <div className="col-12 col-md-9 col-lg-6 mx-auto my-4">
               <div className="border p-4">
                 {show_login ? <LoginWidget toggle={this.toggle} /> : <SignupWidget toggle={this.toggle} />}
