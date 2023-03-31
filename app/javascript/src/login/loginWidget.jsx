@@ -53,8 +53,8 @@ class LoginWidget extends React.Component {
         <form onSubmit={this.login}>
           <input name="email" type="text" className="form-control form-control-lg mb-3" placeholder="Email" value={email} onChange={this.handleChange} required />
           <input name="password" type="password" className="form-control form-control-lg mb-3" placeholder="Password" value={password} onChange={this.handleChange} required />
-          <button type="submit" className="btn btn-danger btn-block btn-lg">Log in</button>
-          {error && <p className="text-danger mt-2">{error}</p>}
+          <button type="submit" className="btn btn-primary btn-block btn-lg">Log in</button>
+          {error && <p className="text-primary mt-2">{error}</p>}
         </form>
         <hr/>
         <p className="mb-0">Don't have an account? <a className="text-primary" onClick={this.props.toggle}>Sign up</a></p>
