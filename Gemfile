@@ -12,7 +12,7 @@ gem 'sass-rails', '~> 6.0'
 gem 'webpacker', '~> 5.0'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-gem 'wdm', '>= 0.1.0'
+
 # Use Uglifier as compressor for JavaScript assets
 # gem 'uglifier', '~> 4.2.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
