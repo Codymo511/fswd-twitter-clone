@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Layout from '@src/layout';
 import './home.scss'
+import { handleErrors } from '@utils/fetchHelper';
 
 
 class Home extends React.Component {
@@ -31,6 +32,7 @@ class Home extends React.Component {
     return (
         <Layout>
         <div className="container">
+        <h1>home </h1>
         </div>
         </Layout>
     )
