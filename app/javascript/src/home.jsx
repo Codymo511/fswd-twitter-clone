@@ -7,6 +7,27 @@ import { handleErrors } from '@utils/fetchHelper';
 
 
 class Home extends React.Component {
+  state = {
+    usersTweets: [],
+    currentUser: "",
+    tweetCount: 0,
+    loading: true,
+  }
+  
+  componentDidMount() {
+    fetch('/api/tweets')
+      .then(handleErrors)
+      .then(data => {
+        this.setState({
+          usersTweets: data.properties,
+          currentUser: data.total_pages,
+          tweetCount: data.next_page,
+          loading: false,
+        })
+      })
+  }
+
+
   render () {
     return (
         <Layout>
