@@ -4,14 +4,14 @@ import ReactDOM from 'react-dom';
 import Layout from '@src/layout';
 import './home.scss'
 import { handleErrors } from '@utils/fetchHelper';
+import loginPage from './login/loginPage';
 
 
 class Home extends React.Component {
   state = {
-    usersTweets: [],
+    tweets: [],
     currentUser: "",
-    tweetCount: 0,
-    loading: true,
+    filter: false
   }
   
   componentDidMount() {
@@ -19,20 +19,19 @@ class Home extends React.Component {
       .then(handleErrors)
       .then(data => {
         this.setState({
-          usersTweets: data.properties,
-          currentUser: data.total_pages,
-          tweetCount: data.next_page,
+          usersTweets: data.tweets,
+          currentUser: data.user,
           loading: false,
         })
       })
   }
 
-
   render () {
     return (
         <Layout>
         <div className="container">
-        <h1>home </h1>
+        <h1>home</h1>
+        <loginPage/>
         </div>
         </Layout>
     )

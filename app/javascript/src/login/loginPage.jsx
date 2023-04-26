@@ -20,6 +20,7 @@ class Login extends React.Component {
         this.setState({
           authenticated: data.authenticated,
         })
+        
       })
   }
 
