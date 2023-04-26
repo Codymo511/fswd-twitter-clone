@@ -3,6 +3,7 @@ import React from 'react';
 import LoginWidget from './loginWidget';
 import SignupWidget from './signupWidget';
 import { safeCredentials, handleErrors } from '@utils/fetchHelper';
+import Layout from '@src/layout';
 
 import './login.scss';
 
