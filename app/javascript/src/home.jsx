@@ -30,7 +30,6 @@ class Home extends React.Component {
     return (
         <Layout>
         <div className="container">
-        <h1>home</h1>
         <loginPage/>
         </div>
         </Layout>

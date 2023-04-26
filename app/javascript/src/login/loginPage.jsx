@@ -1,6 +1,5 @@
 // login.jsx
 import React from 'react';
-import Layout from '@src/layout';
 import LoginWidget from './loginWidget';
 import SignupWidget from './signupWidget';
 import { safeCredentials, handleErrors } from '@utils/fetchHelper';
@@ -34,7 +33,6 @@ class Login extends React.Component {
     const { authenticated, show_login } = this.state;
     if (authenticated) {
       return (
-        <Layout>
           <div className="container">
             <div className="row">
               <div className="col-12 col-md-9 col-lg-6 mx-auto my-4">
@@ -44,7 +42,6 @@ class Login extends React.Component {
               </div>
             </div>
           </div>
-        </Layout>
       );
     };
 
