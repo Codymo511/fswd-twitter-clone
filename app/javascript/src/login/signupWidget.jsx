@@ -1,6 +1,7 @@
 import React from 'react';
 import { safeCredentials, handleErrors } from '@utils/fetchHelper';
 import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 class Signup extends React.Component {
     
