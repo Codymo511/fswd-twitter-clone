@@ -1,26 +1,38 @@
-// layout.js
-import React from 'react';
+import React from "react";
 
-const Layout = (props) => {
-  return (
-    <React.Fragment>
-      <nav className="navbar navbar-expand navbar-light bg-light">
-        <div className="container-fluid">
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto">
-              <li className="nav-item">
-              <a className="nav-link" href="/">Home</a>
-              </li>
-            </ul>
-          </div>
+import Login from "./login/loginWidget";
+import Signup from "./login/signupWidget";
+
+
+const Layout = props => {
+    return(
+        <>
+          <div id="home">
+           <div className="main">
+            <div className="container">
+              <div className="row">
+              <div className="front-card col-xs-10 col-xs-offset-1">
+                  <LoginSignUp/>
+                   </div>
+                 </div>
+                </div>
+               </div>
+            </div>
+        </>
+    )
+}
+
+const LoginSignUp = props => {
+    return(
+      <>
+        <div className="row g-0 mb-4 pb-4">
+        <div className="front-card col-xs-10 col-xs-offset-1">
+           <Login />
+           <Signup />   
+           </div>      
         </div>
-      </nav>
-      {props.children}
-      <footer className="p-3 bg-light">
-       
-      </footer>
-    </React.Fragment>
-  );
+      </>
+    )
 }
 
 export default Layout;
