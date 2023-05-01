@@ -1,45 +1,45 @@
-// home.jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Layout from '@src/layout';
-import './home.scss'
 import { handleErrors } from '@utils/fetchHelper';
-import loginPage from './login/loginPage';
-
-
+import './home.scss';
+import homePage from './userComponents/homePage';
 class Home extends React.Component {
-  state = {
-    tweets: [],
-    currentUser: "",
-    filter: false
-  }
-  
+
+      state = {
+        authenticated: false,
+        username: "",
+        email: "",
+      }
   componentDidMount() {
-    fetch('/api/tweets')
-      .then(handleErrors)
-      .then(data => {
-        this.setState({
-          usersTweets: data.tweets,
-          currentUser: data.user,
-          loading: false,
-        })
+    fetch('/api/authenticated') 
+    .then(handleErrors)
+    .then(data => {
+      this.setState({
+        authenticated: data.authenticated,
+        username: data.username,
+        email: data.email,
       })
+    })
   }
 
-  render () {
-    return (
-        <Layout>
-        <div className="container">
-        <loginPage/>
-        </div>
-        </Layout>
-    )
-  }
+  render() {
+    const {authenticated, username, email } = this.state;
+
+    if (authenticated) {
+      return(
+          <homePage user_id={this.props.user_id} username={username} email={email} />
+      );
+    };
+      return(
+        <Layout />
+      )
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+
   ReactDOM.render(
-    <Home />,
+    <Home/>,
     document.body.appendChild(document.createElement('div')),
-  )
+)
 })

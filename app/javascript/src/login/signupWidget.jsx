@@ -1,96 +1,80 @@
-// signupWidget.jsx
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { safeCredentials, handleErrors } from '@utils/fetchHelper';
+import Form from 'react-bootstrap/Form';
 
-class SignupWidget extends React.Component {
-  state = {
-    email: '',
-    password: '',
-    username: '',
-    error: '',
-  }
-
-  handleChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    })
-  }
-
-  signup = (e) => {
-    if (e) { e.preventDefault(); }
-    this.setState({
-      error: '',
-    });
-
-    fetch('/api/users', safeCredentials({
-      method: 'POST',
-      body: JSON.stringify({
-        user: {
-          email: this.state.email,
-          password: this.state.password,
-          username: this.state.username,
+class Signup extends React.Component {
+    
+    constructor(props) {
+        super(props)
+        this.state = {
+           email: '',
+           password: '',
+           username: '',
+           success: '',
+           error: '',
         }
+    }
+    handleChange = e => {
+      this.setState({
+         [e.target.name]: e.target.value,
       })
-    }))
+    }
+    signup = e => {
+        e.preventDefault();
+
+        fetch('/api/users', safeCredentials({
+            method: 'POST',
+            body: JSON.stringify({
+             user: {
+             username: this.state.username,
+             email: this.state.email,
+             password: this.state.password,
+           }
+         })
+      }))
       .then(handleErrors)
       .then(data => {
-        if (data.user) {
-          this.login();
-        }
+        console.log("data:", data);
+          this.setState({
+             email: '',
+             password: '',
+             username: '',
+             success: 'Sign up success!. You are now allowed to Log in.'
+            })
       })
-      .catch(error => {
-        this.setState({
-          error: 'Could not sign up.',
+    .catch(error => {
+          this.setState({
+           error: "Sorry you failed to sign up. Try again if you please."
         })
       })
-  }
-
-  login = (e) => {
-    if (e) { e.preventDefault(); }
-    this.setState({
-      error: '',
-    });
-
-    fetch('/api/sessions', safeCredentials({
-      method: 'POST',
-      body: JSON.stringify({
-        user: {
-          email: this.state.email,
-          password: this.state.password,
-        }
-      })
-    }))
-      .then(handleErrors)
-      .then(data => {
-        if (data.success) {
-          const params = new URLSearchParams(window.location.search);
-          const redirect_url = params.get('redirect_url') || '/';
-          window.location = redirect_url;
-        }
-      })
-      .catch(error => {
-        this.setState({
-          error: 'Could not log in.',
-        })
-      })
-  }
-
-  render () {
-    const { email, password, username, error } = this.state;
-    return (
-      <React.Fragment>
-        <form onSubmit={this.signup}>
-          <input name="username" type="text" className="form-control form-control-lg mb-3" placeholder="Username" value={username} onChange={this.handleChange} required />
-          <input name="email" type="text" className="form-control form-control-lg mb-3" placeholder="Email" value={email} onChange={this.handleChange} required />
-          <input name="password" type="password" className="form-control form-control-lg mb-3" placeholder="Password" value={password} onChange={this.handleChange} required />
-          <button type="submit" className="btn bg-primary btn-block btn-lg">Sign up</button>
-        </form>
-        <hr/>
-        <p className="mb-0">Already have an account? <a className="text-primary" onClick={this.props.toggle}>Log in</a></p>
-      </React.Fragment>
-    )
+    }
+  
+    render() {
+        const { username, email, password, success, error } = this.state;
+        return(
+          <div className="p-3 log-in-sign-up-background rounded">
+              <h6 className="my-3"><b>Join Twitter today</b></h6>
+                  <Form onSubmit={this.signup}>
+                    <Form.Group className="mb-3">
+                          <Form.Control type="username" placeholder="Username" name="username" value={username} onChange={this.handleChange} />
+                      </Form.Group>
+                      <Form.Group className="mb-3">
+                        <Form.Control type="email" placeholder="Email" name="email" value={email} onChange={this.handleChange} />
+                      </Form.Group>
+                      <Form.Group className="mb-4">
+                          <Form.Control type="password" placeholder="Password" name="password" value={password} onChange={this.handleChange} />
+                      </Form.Group>
+                    <div className="d-grid gap-2">
+                      <Button type="submit" variant="primary" size="sm" className="sign-up-button">
+                        Sign up
+                      </Button>
+                   </div>
+                 {success && <p className="text-warning mt-2">{success}</p>}
+                 {error && <p className="text-danger mt-2">{error}</p>}
+              </Form>
+         </div>
+      )
   }
 }
 
-export default SignupWidget
+export default Signup
