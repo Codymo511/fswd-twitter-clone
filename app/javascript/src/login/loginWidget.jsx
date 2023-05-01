@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { safeCredentials, handleErrors } from '../utils/fetchHelper';
+import Button from 'react-bootstrap/Button';
 
 class LoginWidget extends React.Component {
   state = {
@@ -53,7 +54,7 @@ class LoginWidget extends React.Component {
         <form onSubmit={this.login}>
           <input name="email" type="text" className="form-control form-control-lg mb-3" placeholder="Email" value={email} onChange={this.handleChange} required />
           <input name="password" type="password" className="form-control form-control-lg mb-3" placeholder="Password" value={password} onChange={this.handleChange} required />
-          <button type="submit" className="btn bg-primary btn-block btn-lg">Log in</button>
+          <Button type="submit" className="btn bg-primary btn-block btn-lg">Log in</Button>
           {error && <p className="text-primary mt-2">{error}</p>}
         </form>
         <hr/>

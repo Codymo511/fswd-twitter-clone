@@ -15,6 +15,7 @@
     "fetch-helpers": "^9.0.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
+    "react-bootstrap-buttons": "^1.0.0",
     "react-dom": "^17.0.2",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
