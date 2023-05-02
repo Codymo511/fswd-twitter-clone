@@ -11,7 +11,8 @@ const Layout = props => {
             <div className="container">
               <div className="row">
               <div className="front-card col-xs-10 col-xs-offset-1">
-                  <LoginSignUp/>
+              <Login />
+              <Signup /> 
                    </div>
                  </div>
                 </div>
@@ -21,17 +22,5 @@ const Layout = props => {
     )
 }
 
-const LoginSignUp = props => {
-    return(
-      <>
-        <div className="row g-0 mb-4 pb-4">
-        <div className="front-card col-xs-10 col-xs-offset-1">
-           <Login />
-           <Signup />   
-           </div>      
-        </div>
-      </>
-    )
-}
 
 export default Layout;
