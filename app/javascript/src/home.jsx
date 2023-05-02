@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { handleErrors } from '@utils/fetchHelper';
+import homePage from 'userComponents/homePage';
 import './home.scss';
 import Layout from './layout'
 
@@ -24,8 +25,8 @@ class Home extends React.Component {
 
   render() {
     const {authenticated, username, email } = this.state;
-
     if (authenticated) {
+
       return(
           <homePage user_id={this.props.user_id} username={username} email={email} />
       );
