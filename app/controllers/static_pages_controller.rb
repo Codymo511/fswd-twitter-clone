@@ -3,8 +3,8 @@ class StaticPagesController < ApplicationController
     render 'home'
   end
 
-  def login
-    render 'login'
+  def userpage
+    @data = { username: params[:username] }.to_json
+    render 'userFeedPage'
   end
-  
 end
