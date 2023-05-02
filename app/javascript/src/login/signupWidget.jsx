@@ -45,7 +45,7 @@ class Signup extends React.Component {
       })
     .catch(error => {
           this.setState({
-           error: "Sorry you failed to sign up. Try again if you please."
+           error: "Sorry you failed to sign up. Please try again."
         })
       })
     }

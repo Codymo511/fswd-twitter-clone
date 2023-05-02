@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import { handleErrors } from '@utils/fetchHelper';
 import './home.scss';
 import Layout from './layout'
-class Home extends React.Component {
 
+class Home extends React.Component {
       state = {
         authenticated: false,
         username: "",
