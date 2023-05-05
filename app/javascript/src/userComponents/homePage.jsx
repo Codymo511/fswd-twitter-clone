@@ -1,6 +1,6 @@
 import React from "react";
-import Feed from './feeds';
 import "../home.scss";
+import UserHomeFeed from './feeds'
 
 class homePage extends React.Component {
     constructor(props) {
@@ -19,7 +19,7 @@ class homePage extends React.Component {
             <div className="container">
                 <div className="row g-0 h-100">
                     <div className="col-6 feed-inner">
-                        <homePage username={username}/>
+                        <UserHomeFeed username={username}/>
                     </div>
                 </div>
             </div>
