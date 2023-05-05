@@ -11,6 +11,7 @@ class Home extends React.Component {
         username: "",
         email: "",
       }
+      
   componentDidMount() {
     fetch('/api/authenticated') 
     .then(handleErrors)
@@ -26,7 +27,6 @@ class Home extends React.Component {
   render() {
     const {authenticated, username, email } = this.state;
     if (authenticated) {
-
       return(
           <homePage user_id={this.props.user_id} username={username} email={email} />
       );
