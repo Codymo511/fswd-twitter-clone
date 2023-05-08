@@ -79,9 +79,6 @@ class UserTweets extends React.Component {
                              </div>
                            <div className='col py-1'>
                           <span>{tweet.message}</span>
-                         {(tweet.image !== null) ? <div>
-                       <img className='img-fluid' src={tweet.image} alt='Image' />
-                    </div> : <div></div>}
                   </div>
                 </div>
               </div>
