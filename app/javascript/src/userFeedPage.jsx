@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import UserTweets from '@src/userComponents/Tweets';
+import Tweets from '@src/userComponents/Tweets';
 import Layout from '@src/Layout';
 import './userFeedsPage.scss';
 import { handleErrors } from '@utils/fetchHelper';
@@ -37,9 +37,7 @@ class UserPage extends React.Component {
       return (
         <div className="container">
           <div className="row g-0 h-100">
-            <div className="col-3 d-flex justify-content-end ">
-              <LeftBox username={username} email={email} />
-            </div>
+           
             <div className="col-6 feed-inner">
               <div className="row d-flex flex-column px-3 py-2">
                 <div className="col py-3">
@@ -55,7 +53,7 @@ class UserPage extends React.Component {
                   </div>
                 </div>
                 <div className="col">
-                  <UserTweets username={this.props.username} currentUsername={username} />
+                  <Tweets username={this.props.username} currentUsername={username} />
                 </div>
               </div>
             </div>

@@ -1,37 +1,19 @@
-import React from 'react';
-import { safeCredentials, handleErrors } from '@utils/fetchHelper';
+import React from "react";
+import { handleErrors, safeCredentials } from "@utils/fetchHelper";
 
 
 
-class UserTweets extends React.Component {
+class Tweets extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            userTweets: [],
+            username: this.props.username
         }
-    }
-
-    componentDidMount() {
-        this.getUserTweets();
-    }
-
-    getUserTweets() {
-        const username = this.props.username;
-
-        fetch(`/api/users/${username}/tweets`)
-        .then(handleErrors)
-        .then(data => {
-           console.log('data', data)
-           this.setState({
-            userTweets: data.tweets,
-           })
-        })
     }
 
     deleteTweet = e => {
         e.preventDefault();
-
         let tweetElement = e.target.closest('.tweet-inner');
         let tweetId = tweetElement.getAttribute('id');
 
@@ -40,56 +22,57 @@ class UserTweets extends React.Component {
         }))
         .then(handleErrors)
         .then(data => {
-            console.log('data', data);
+            console.log('data: ', data);
             if(data.success) {
-                this.getUserTweets();
+                this.props.getAllTweets();
             }
         })
         .catch(error => {
             this.setState({
-                error: 'You are not allowed to delete this tweet. Try again.',
+                error: 'You cannot delete the tweet.'
             })
         })
     }
 
     render() {
-        const { userTweets } = this.state;
-        
-        return (
-            <div className='tweets py-3'>
-                 {userTweets.map(tweet => {
+        const { username } = this.state;
+        const { tweets } = this.props;
 
-                    return(
-                        <div key={tweet.id} id={tweet.id} className="row d-flex py-2 tweet-inner">
-                              <div className='col-1'>
-                                 <span className='fa-layers fa-fw fa-2x'>
-                                  
-                                </span>
-                                </div>
-                             <div className='col-11'>
-                                    <div className='row d-flex flex-column tweet-details'>
-                                    <div className='col d-flex justify-content-between'>
+        return(
+            <div className="tweets pt-3">
+            {tweets.map(tweet => {
+                return(
+                    <div key={tweet.id} id={tweet.id} className="row d-flex py-2 tweet-inner">
+                        <div className="col-1">
+                            <span className="fa-layer fa-fw fa-2x">
+                                <FontAwesomeIcon icon={faCircle} className="circle-grey"/>
+                                <FontAwesomeIcon icon={faUser} transform="shrink-4"/>
+                            </span>
+                        </div>
+                        <div className="col-11">
+                            <div className="row d-flex flex-column tweet-details">
+                                <div className="col d-flex justify-content-between">
                                     <div>
-                                    <span className='tweet-name'><b>{tweet.username}</b></span>
-                                    <a href={`/${tweet.username}`} className="p-0 align-top tweet-username">@{tweet.username}</a>
-                                 </div>
-                                {(tweet.username == this.props.currentUsername)
-                                ? <button className="btn btn-link btn-delete" onClick={this.deleteTweet}>Delete</button> : <div></div>
-                              }
-                             </div>
-                           <div className='col py-1'>
-                          <span>{tweet.message}</span>
-                  </div>
-                </div>
-              </div>
+                                        <span className="tweet-name"><b>{tweet.username}</b></span>
+                                        <a href={`/${tweet.username}`} className="p-0 tweet-username">@{tweet.username}</a>
+                                        <span className="tweet-time">• {FormatDate(tweet.created_at, true)}</span>
+                                    </div>
+
+                                    {(tweet.username == username) ? <button type="button" className="btn btn-link btn-delete" onClick={this.deleteTweet}>Delete</button> : <div></div>}
+
+                                </div>
+                                <div className="col py-1">
+                                    <span>{tweet.message}</span>
+                                    {(tweet.image !== null) ? <div><img className="img-fluid" src={tweet.image} alt='Image'/></div> : <div></div>}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )
+            })}
             </div>
-         )
-        })}
-    </div>
-           
-  )
-        
- }    
+        )
+    }
 }
 
-export default UserTweets;
+export default Tweets;
