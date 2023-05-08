@@ -1,6 +1,6 @@
 import React from 'react';
 import { safeCredentials, handleErrors } from '@utils/fetchHelper';
-import FormatDate from '@utils/formatDate';
+
 
 
 class UserTweets extends React.Component {
@@ -72,7 +72,6 @@ class UserTweets extends React.Component {
                                     <div>
                                     <span className='tweet-name'><b>{tweet.username}</b></span>
                                     <a href={`/${tweet.username}`} className="p-0 align-top tweet-username">@{tweet.username}</a>
-                                    <span className='tweet-time'>• {FormatDate(tweet.created_at, true)}</span>
                                  </div>
                                 {(tweet.username == this.props.currentUsername)
                                 ? <button className="btn btn-link btn-delete" onClick={this.deleteTweet}>Delete</button> : <div></div>
