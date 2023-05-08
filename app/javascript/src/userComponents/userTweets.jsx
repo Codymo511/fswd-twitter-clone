@@ -2,7 +2,6 @@ import React from 'react';
 import { safeCredentials, handleErrors } from '@utils/fetchHelper';
 
 
-
 class UserTweets extends React.Component {
     constructor(props) {
         super(props);
@@ -61,38 +60,33 @@ class UserTweets extends React.Component {
 
                     return(
                         <div key={tweet.id} id={tweet.id} className="row d-flex py-2 tweet-inner">
-                              <div className='col-1'>
-                                 <span className='fa-layers fa-fw fa-2x'>
-                                  
-                                </span>
-                                </div>
-                             <div className='col-11'>
-                                    <div className='row d-flex flex-column tweet-details'>
-                                    <div className='col d-flex justify-content-between'>
+                            <div className='col-1'>
+                            </div>
+                            <div className='col-11'>
+                                <div className='row d-flex flex-column tweet-details'>
+                                  <div className='col d-flex justify-content-between'>
                                     <div>
-                                    <span className='tweet-name'><b>{tweet.username}</b></span>
-                                    <a href={`/${tweet.username}`} className="p-0 align-top tweet-username">@{tweet.username}</a>
-                                 </div>
-                                {(tweet.username == this.props.currentUsername)
-                                ? <button className="btn btn-link btn-delete" onClick={this.deleteTweet}>Delete</button> : <div></div>
-                              }
-                             </div>
-                           <div className='col py-1'>
-                          <span>{tweet.message}</span>
-                         {(tweet.image !== null) ? <div>
-                       <img className='img-fluid' src={tweet.image} alt='Image' />
-                    </div> : <div></div>}
-                  </div>
-                </div>
-              </div>
+                                        <span className='tweet-name'><b>{tweet.username}</b></span>
+                                             <a href={`/${tweet.username}`} className="p-0 align-top tweet-username">@{tweet.username}</a>
+                                        </div>
+                                        {(tweet.username == this.props.currentUsername)
+                                        ? <button className="btn btn-link btn-delete" onClick={this.deleteTweet}>Delete</button> : <div></div>
+                                        }
+                                        </div>
+                                        <div className='col py-1'>
+                                        <span>{tweet.message}</span>
+                                        {(tweet.image !== null) ? <div>
+                                             <img className='img-fluid' src={tweet.image} alt='Image' />
+                                        </div> : <div></div>}
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                    )
+                 })}
             </div>
-         )
-        })}
-    </div>
-           
-  )
-        
- }    
+        )
+    }    
 }
 
 export default UserTweets;
