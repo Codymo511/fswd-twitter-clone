@@ -1,7 +1,7 @@
 import React from "react";
 import { handleErrors, safeCredentialsFormData } from "@utils/fetchHelper";
 
-class TweetComponent extends React.Component {
+class CreateTweet extends React.Component {
     constructor(props) {
         super(props); 
 
@@ -82,4 +82,4 @@ class TweetComponent extends React.Component {
     }
 }
 
-export default TweetComponent
+export default CreateTweet

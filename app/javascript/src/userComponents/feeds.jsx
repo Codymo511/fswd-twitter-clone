@@ -1,5 +1,6 @@
 import React from "react";
 import Tweets from './tweets';
+import CreateTweet from "./CreateTweet";
 import { handleErrors } from '@utils/fetchHelper';
 
 class UserHomeFeed extends React.Component {
@@ -38,6 +39,7 @@ class UserHomeFeed extends React.Component {
                 </div>
 
                 <div className="col">
+                <CreateTweet tweets={tweets} getAllTweets={this.getAllTweets}/>
                 </div>
 
                 <div className="col">
