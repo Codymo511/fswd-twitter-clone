@@ -3,7 +3,7 @@ import { safeCredentials, handleErrors } from '@utils/fetchHelper';
 
 
 
-class UserTweets extends React.Component {
+class Tweets extends React.Component {
     constructor(props) {
         super(props);
 
@@ -95,4 +95,4 @@ class UserTweets extends React.Component {
  }    
 }
 
-export default UserTweets;
+export default Tweets;
