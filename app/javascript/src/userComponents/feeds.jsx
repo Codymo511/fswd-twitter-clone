@@ -1,5 +1,5 @@
 import React from "react";
-
+import Tweets from './tweets';
 import { handleErrors } from '@utils/fetchHelper';
 
 class UserHomeFeed extends React.Component {
