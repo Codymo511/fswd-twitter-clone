@@ -33,7 +33,7 @@ class CreateTweet extends React.Component {
             formData.append('tweet[image]', this.state.selectedFile, this.state.selectedFile.name);
         }
 
-        fetch('/api/tweets', safeCredentialsFormData({
+        fetch('/api/tweets', safeCredentials({
             method: 'POST',
             body: formData,
         }))
