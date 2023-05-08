@@ -1,9 +1,7 @@
 import React from 'react';
 import { safeCredentials, handleErrors } from '@utils/fetchHelper';
 import FormatDate from '@utils/formatDate';
-import { faCircle } from '@fortawesome/free-solid-svg-icons';
-import { faUser } from '@fortawesome/free-regular-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 class UserTweets extends React.Component {
     constructor(props) {
