@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import UserTweets from '@src/userComponents/Tweets';
 import Layout from '@src/Layout';
+import './userFeedsPage.scss';
 import { handleErrors } from '@utils/fetchHelper';
 
 class UserPage extends React.Component {

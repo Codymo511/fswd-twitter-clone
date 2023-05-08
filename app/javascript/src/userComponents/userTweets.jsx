@@ -52,7 +52,8 @@ class UserTweets extends React.Component {
     }
 
     render() {
-        const { userTweets } = this.state;
+        const { username } = this.state;
+        const { userTweets } = this.props;
         
         return (
             <div className='tweets py-3'>
@@ -74,10 +75,7 @@ class UserTweets extends React.Component {
                                         }
                                         </div>
                                         <div className='col py-1'>
-                                        <span>{tweet.message}</span>
-                                        {(tweet.image !== null) ? <div>
-                                             <img className='img-fluid' src={tweet.image} alt='Image' />
-                                        </div> : <div></div>}
+                                        <span>{tweet.message}</span> 
                                     </div>
                                 </div>
                             </div>
