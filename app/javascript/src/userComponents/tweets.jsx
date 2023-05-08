@@ -65,8 +65,7 @@ class UserTweets extends React.Component {
                         <div key={tweet.id} id={tweet.id} className="row d-flex py-2 tweet-inner">
                               <div className='col-1'>
                                  <span className='fa-layers fa-fw fa-2x'>
-                                    <FontAwesomeIcon icon={faCircle} className="circle-grey"/>
-                                    <FontAwesomeIcon icon={faUser} transform="shrink-4"/>
+                                  
                                 </span>
                                 </div>
                              <div className='col-11'>
