@@ -1,5 +1,5 @@
 import React from "react";
-import { handleErrors, safeCredentialsFormData } from "@utils/fetchHelper";
+import { safeCredentials, handleErrors } from '@utils/fetchHelper';
 
 class CreateTweet extends React.Component {
     constructor(props) {
