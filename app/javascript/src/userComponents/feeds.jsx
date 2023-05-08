@@ -41,6 +41,7 @@ class UserHomeFeed extends React.Component {
                 </div>
 
                 <div className="col">
+                <Tweets username={username} tweets={tweets} getAllTweets={this.getAllTweets}/>
                 </div>
             </div>            
         )
