@@ -2,7 +2,7 @@ import React from "react";
 import "../home.scss";
 import UserHomeFeed from './feeds'
 
-class homePage extends React.Component {
+class HomePage extends React.Component {
     constructor(props) {
         super(props);
 
@@ -27,4 +27,4 @@ class homePage extends React.Component {
     }
 }
 
-export default homePage;
+export default HomePage;
