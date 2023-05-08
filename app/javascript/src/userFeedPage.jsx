@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Tweets from '@src/userComponents/Tweets';
+import Tweets from '@src/userComponents/tweets';
 import Layout from '@src/Layout';
 import './userFeedsPage.scss';
 import { handleErrors } from '@utils/fetchHelper';
