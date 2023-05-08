@@ -1,5 +1,5 @@
 import React from "react";
-import { safeCredentials, handleErrors } from '@utils/fetchHelper';
+import { handleErrors, safeCredentialsFormData } from "@utils/fetchHelper";
 
 class CreateTweet extends React.Component {
     constructor(props) {
@@ -33,7 +33,7 @@ class CreateTweet extends React.Component {
             formData.append('tweet[image]', this.state.selectedFile, this.state.selectedFile.name);
         }
 
-        fetch('/api/tweets', safeCredentials({
+        fetch('/api/tweets', safeCredentialsFormData({
             method: 'POST',
             body: formData,
         }))
