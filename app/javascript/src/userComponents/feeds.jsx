@@ -1,5 +1,5 @@
 import React from "react";
-import Tweets from './userTweets';
+import Tweets from './tweets';
 import CreateTweet from "./CreateTweet";
 import { handleErrors } from '@utils/fetchHelper';
 
