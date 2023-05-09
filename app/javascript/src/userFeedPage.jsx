@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Tweets from '@src/userComponents/tweets';
+import UserTweets from '@src/userComponents/userTweets';
 import Layout from '@src/Layout';
 import './userFeedsPage.scss';
 import { handleErrors } from '@utils/fetchHelper';
@@ -53,7 +53,7 @@ class UserPage extends React.Component {
                   </div>
                 </div>
                 <div className="col">
-                  <Tweets username={this.props.username} currentUsername={username} />
+                  <UserTweets username={this.props.username} currentUsername={username} />
                 </div>
               </div>
             </div>
