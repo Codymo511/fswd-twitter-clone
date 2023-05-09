@@ -52,7 +52,7 @@ class Tweets extends React.Component {
                                     <div>
                                         <span className="tweet-name"><b>{tweet.username}</b></span>
                                         <a href={`/${tweet.username}`} className="p-0 tweet-username">@{tweet.username}</a>
-                                        <span className="tweet-time">• {FormatDate(tweet.created_at, true)}</span>
+                                    
                                     </div>
 
                                     {(tweet.username == username) ? <button type="button" className="btn btn-link btn-delete" onClick={this.deleteTweet}>Delete</button> : <div></div>}
