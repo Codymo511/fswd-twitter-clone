@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to:'static_pages#home'
+  root 'static_pages#home'
 
 
   get '/login' => 'static_pages#login'
@@ -19,6 +19,6 @@ Rails.application.routes.draw do
     get  '/users/:username/tweets' => 'tweets#index_by_user'
     get  '/tweets/search/:keyword' => 'tweets#search'
   end
-
+ 
   # if you are using active storage to upload and store images, comment the above line
 end
