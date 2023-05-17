@@ -32,13 +32,9 @@ class UserHomeFeed extends React.Component {
         const { username, tweets } = this.state;
         return(
             <div>
-                <div className="row d-flex flex-column px-3 py-2">
-                    <div className="col py-3">
-                        <h5 className="mb-0"><b>Home</b></h5>
-                    </div>
-                </div>
+                
 
-                <div className="col">
+                <div className="col pt-5">
                 <CreateTweet tweets={tweets} getAllTweets={this.getAllTweets}/>
                 </div>
 

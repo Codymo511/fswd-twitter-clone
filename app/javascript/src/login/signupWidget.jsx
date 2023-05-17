@@ -67,7 +67,7 @@ class Signup extends React.Component {
                       </Form.Group>
                     <div className="d-grid gap-2">
                       <Button type="submit" variant="primary" size="sm" className="sign-up-button">
-                        Sign up
+                        Sign up for Twitter
                       </Button>
                    </div>
                  {success && <p className="text-warning mt-2">{success}</p>}

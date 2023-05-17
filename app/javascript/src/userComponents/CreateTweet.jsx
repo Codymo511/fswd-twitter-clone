@@ -61,7 +61,7 @@ class CreateTweet extends React.Component {
         
         return(
             <form onSubmit={this.submitTweet}>
-                <div className="mb-2">
+                <div className="me-3 my-3">
                     <textarea className="form-control" id="tweet" rows="3" placeholder="What's happening?" name="msg" value={msg} onChange={this.handleChange}></textarea>
                 </div>
                 
@@ -71,7 +71,7 @@ class CreateTweet extends React.Component {
                     </div>
 
                     <div className="col d-flex justify-content-end">
-                        <button type="submit" className="btn btn-tweet btn-primary"><b>Tweet</b></button>
+                        <button type="submit" className="btn btn-tweet btn-primary me-3"><b>Tweet</b></button>
                     </div>    
                 </div>
                 {error && <p className="text-danger mt-2">{error}</p>}

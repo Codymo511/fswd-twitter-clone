@@ -4,6 +4,7 @@ import { handleErrors } from '@utils/fetchHelper';
 import HomePage from './userComponents/homePage';
 import './home.scss';
 import Layout from './layout'
+import Navbar from './navbar';
 
 class Home extends React.Component {
       state = {

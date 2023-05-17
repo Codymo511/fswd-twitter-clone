@@ -4,6 +4,7 @@ import UserTweets from '@src/userComponents/userTweets';
 import Layout from '@src/Layout';
 import './userFeedsPage.scss';
 import { handleErrors } from '@utils/fetchHelper';
+import UserField from '@src/userComponents/userField';
 
 class UserPage extends React.Component {
   constructor(props) {
@@ -37,14 +38,15 @@ class UserPage extends React.Component {
       return (
         <div className="container">
           <div className="row g-0 h-100">
-           
+          <div className="col-3 d-flex justify-content-end ">
+          <UserField username={username} email={email} />
+        </div>
             <div className="col-6 feed-inner">
               <div className="row d-flex flex-column px-3 py-2">
                 <div className="col py-3">
                   <div className="row d-flex">
                     <div className="col-1 d-flex justify-content-center align-items-center">
                       <a href="/">
-                        
                       </a>
                     </div>
                     <div className="col-11">

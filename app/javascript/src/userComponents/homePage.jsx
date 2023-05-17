@@ -1,6 +1,8 @@
 import React from "react";
 import "../home.scss";
 import UserHomeFeed from './feeds'
+import UserField from '@src/userComponents/userField';
+import Navbar from "../navbar";
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -16,15 +18,22 @@ class HomePage extends React.Component {
         const {username, email} = this.state;
 
         return (
-            <div className="container">
-                <div className="row g-0 h-100">
-                    <div className="col-6 feed-inner">
+         <div className="main">
+            <div className="container-fluid">
+              <div className="row">
+               <Navbar />
+              <div className=" col-sm-6 mt-4 p-4 ">
+                        <UserField username={username} email={email}/>
+                    </div>
+                    <div className="col-sm-6 feed-inner">
                         <UserHomeFeed username={username}/>
                     </div>
                 </div>
-            </div>
+            </div>  
+        </div>     
         )
     }
 }
+
 
 export default HomePage;
