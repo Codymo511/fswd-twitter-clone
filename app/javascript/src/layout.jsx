@@ -3,6 +3,7 @@ import Login from "./login/loginPage";
 import Signup from "./login/signupWidget";
 import Navbar from "./navbar";
 import './layout.scss';
+
 const Layout = props => {
     return(
         <>
