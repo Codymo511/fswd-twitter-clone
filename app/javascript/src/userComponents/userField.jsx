@@ -42,14 +42,14 @@ class UserField extends React.Component {
                               <h6>@{username}</h6>
                             </div>
                          
-                        <div className="row d-flex flex-row px-5 justify-space-around">
-                            <div className="col-3 w-5">
+                        <div className="row d-flex flex-row px-5 justify-space-between">
+                            <div className="col-md-3 w-5">
                             <h6 className="mb-0">Tweets</h6><p>8</p>
                             </div>
-                            <div className="col-3">
+                            <div className="col-md-3">
                             <h6 className="mb-0">Following</h6><p>35</p>
                             </div>
-                            <div className="col-3">
+                            <div className="col-md-3">
                             <h6 className="mb-0">Followers</h6><p>20</p>
                         </div>
                         </div>

@@ -59,7 +59,6 @@ class UserTweets extends React.Component {
         return (
             <div className='tweets py-3'>
                  {userTweets.map(tweet => {
-
                     return(
                         <div key={tweet.id} id={tweet.id} className="row d-flex py-2 tweet-inner">
                               <div className='col-1'>
@@ -80,6 +79,9 @@ class UserTweets extends React.Component {
                              </div>
                            <div className='col py-1'>
                           <span>{tweet.message}</span>
+                          {(tweet.image !== null) ? <div>
+                            <img className='img-fluid' src={tweet.image} />
+                        </div> : <div></div>}
                   </div>
                 </div>
               </div>

@@ -42,7 +42,7 @@ class Tweets extends React.Component {
             <div className="tweets pt-3">
             {tweets.map(tweet => {
                 return(
-                    <div key={tweet.id} id={tweet.id} className="row d-flex py-2 ps-3">                
+                    <div key={tweet.id} id={tweet.id} className="row d-flex py-2 ps-2 tweet-inner">                
                         <div className="col-11">
                             <div className="row d-flex flex-column tweet-details border">
                                 <div className="col d-flex justify-content-between">
@@ -54,6 +54,7 @@ class Tweets extends React.Component {
                                 </div>
                                 <div className="col py-1">
                                     <span>{tweet.message}</span>
+                                    {(tweet.image !== null) ? <div><img className="img-fluid" src={tweet.image} /></div> : <div></div>}
                                 </div>
                             </div>
                         </div>
