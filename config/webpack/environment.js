@@ -17,9 +17,3 @@ environment.config.merge(customConfig);
 
 module.exports = environment
 
-module.exports = {
-  
-  resolve: {
-    extensions: ['.js', '.jsx']
-  }
-};
