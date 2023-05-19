@@ -2,7 +2,6 @@ import React from "react";
 import Login from "./login/loginPage";
 import Signup from "./login/signupWidget";
 import Navbar from "./navbar";
-import './Layout.scss';
 
 const Layout = props => {
     return(
