@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import UserTweets from '@src/userComponents/userTweets';
-import Layout from '@src/Layout';
+import Layout from '@src/layout';
 import './userFeedPage.scss';
 import { handleErrors } from '@utils/fetchHelper';
 import UserField from '@src/userComponents/userField';
